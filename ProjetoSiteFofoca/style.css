@@ -1,0 +1,248 @@
+ /* Reset de Estilos */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Deixando o site responsivo */
+/* Exemplo de media query para dispositivos com largura de tela menor que 768 pixels */
+@media screen and (max-width: 768px) {
+    /* Estilos para dispositivos com largura de tela menor que 768 pixels */
+    .menu-item {
+        position: relative;
+    }
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #000;
+        width: 100%;
+    }
+    .menu-item:hover .submenu {
+        display: block;
+    }
+}
+
+/* Exemplo de media query para dispositivos com largura de tela entre 768 e 1024 pixels */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Estilos para dispositivos com largura de tela entre 768 e 1024 pixels */
+}
+
+/* Exemplo de media query para dispositivos com largura de tela maior que 1024 pixels */
+@media screen and (min-width: 1024px) {
+    /* Estilos para dispositivos com largura de tela maior que 1024 pixels */
+}
+
+/* Exemplo de uso de unidades de medida relativas */
+.container {
+    width: 100%; /* 100% da largura do elemento pai */
+    padding: 1em; /* 1 vezes o tamanho da fonte do elemento pai */
+}
+
+/* Estilo para imagens responsivas */
+img {
+    max-width: 100%; /* A imagem não ficará maior que o contêiner */
+    height: auto; /* A altura será ajustada proporcionalmente */
+}
+
+/* Estilo do Menu */
+.menu {
+    background-color: #000000f6;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: antiquewhite;
+}
+
+.menu-item {
+    position: relative;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000;
+    width: 100%;
+    padding: 10px;
+}
+
+.submenu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.submenu a:hover {
+    background-color: #333;
+}
+
+/*.banner {
+    margin-top: 20px;
+}*/
+/* inicio da configuração do banner*/
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Ajuste a altura do banner conforme necessário */
+    overflow: hidden;
+  }
+  
+  .banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .banner img.active {
+    opacity: 1;
+  }
+  
+
+/* Fim da configuração do banner*/
+
+.aside-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.aside {
+    flex: 1;
+    padding: 10px;
+}
+
+.aside-left {
+    border-right: 1px solid #e00d0d;
+    display: flex;
+    margin-right: 8px;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: rgb(241, 33, 193);
+    width: 100px;
+    height: 800px;
+    background-color: #00000041;
+    margin-top: 18px;
+    margin-left: 15px;
+    
+}
+.aside-left h2{
+    text-align:center;
+    font-size: 12px;
+    flex-flow: column;
+}
+.aside-left h2 p{
+    text-align:center;
+}
+
+.aside-right {
+    border-left: 1px solid #ccc;
+}
+/* Inicio das divs mkt*/
+    .mkt1{
+        margin-top: 20px;
+        width: 250px;
+        height: 500px;
+        background-color: rgb(155, 135, 56);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; 
+        border-radius: 5px;
+        border: 1px solid;
+        border-color: rgb(109, 43, 2);
+        padding: 10px;
+
+        
+    }
+    .mkt2{
+        margin-top: 20px;
+        width: 400px;
+        height: 500px;
+        background-color: rgb(247, 118, 75);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; 
+        border-radius: 5px;
+        border: 1px solid;
+        border-color: rgb(109, 43, 2);
+        padding: 10px;
+    }
+    .mkt3{
+        margin-top: 20px;
+        width: 250px;
+        height: 500px;
+        background-color: aquamarine;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; 
+        border-radius: 5px;
+        border: 1px solid;
+        border-color: rgb(109, 43, 2);
+        padding: 10px;
+    }
+
+/* Fim das divs mkt*/
+/* Inicio do footer*/
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 1em;
+    background-color: #000000f6;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: antiquewhite;
+    position: relative;
+    margin-right: 20px;
+    position: bottom;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-logo h3 {
+    font-size: 1.5em;
+  }
+  
+  .footer-logo p {
+    font-size: 0.8em;
+  }
+  
+  .footer-social ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .footer-social ul li {
+    margin-left: 1em;
+  }
+  
+  .footer-social ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-social ul li a i {
+    font-size: 1.5em;
+  }
+  
+/* Fim do footer*/
