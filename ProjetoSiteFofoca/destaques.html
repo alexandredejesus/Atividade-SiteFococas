@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Galeria de Fotos</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<!-- Inicio da Galeria de Fotos -->
+
+<div class="containerGaleria">
+    <h1>Galeria de Fotos</h1>
+    <div class="gallery">
+        <img src="img/pexels-patrick-mclachlan-995765.jpg" alt="Foto 1" class="gallery-img">
+        <img src="img/2.jpg" alt="Foto 2" class="gallery-img">
+        <!-- Adicione mais imagens aqui -->
+    </div>
+</div>
+<div class="modal">
+    <span class="close">&times;</span>
+    <img src="" alt="Foto Ampliada" id="modal-img">
+</div>
+<!-- Fim da Galeria de Fotos -->
+<script>
+    const galleryImgs = document.querySelectorAll('.gallery-img'); // Seleciona todas as miniaturas da galeria
+const modal = document.querySelector('.modal'); // Seleciona o modal
+const modalImg = document.querySelector('#modal-img'); // Seleciona a imagem ampliada no modal
+const closeBtn = document.querySelector('.close'); // Seleciona o botão de fechar do modal
+
+galleryImgs.forEach(img => {
+  img.addEventListener('click', () => { // Adiciona um evento de clique a cada miniatura da galeria
+    modalImg.src = img.src; // Define a imagem ampliada do modal como a imagem da miniatura clicada
+    modal.style.display = 'block'; // Exibe o modal
+    document.body.style.overflow = 'hidden'; // Impede a rolagem da página quando o modal está aberto
+  });
+});
+
+closeBtn.addEventListener('click', () => { // Adiciona um evento de clique ao botão de fechar do modal
+  modal.style.display = 'none'; // Oculta o modal
+  document.body.style.overflow = 'auto'; // Restaura a rolagem da página
+});
+
+modal.addEventListener('click', (e) => { // Adiciona um evento de clique ao modal
+  if (e.target === modal) { // Verifica se o clique foi fora da imagem ampliada
+    modal.style.display = 'none'; // Oculta o modal
+  }
+});
+</script>
+</body>
+</html>
