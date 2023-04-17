@@ -61,7 +61,7 @@ img {
   position: relative;
 }
 
-.menu {
+.menu {  
   background-color: #000000f6;
   height: 60px;
   display: flex;
@@ -105,7 +105,7 @@ img {
 }
 
 /* Configuração do banner */
-.banner {
+.banner { /*tem uma ação no JS que movimenta entre as imagens*/
   position: relative;
   width: 1519px;
   height: 625px; /* Ajuste a altura do banner conforme necessário */
