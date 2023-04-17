@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Galeria de Fotos</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="noticias.css" />
+  </head>
+  <body>
+    <!-- Inicio da Galeria de Fotos -->
+    <div class="containerGaleria">
+      <h1>Galeria de Fotos</h1>
+      <div class="gallery">
+        <img
+          src="img/pexels-patrick-mclachlan-995765.jpg"
+          alt="Foto 1"
+          class="gallery-img"
+        />
+        <img src="img/2.jpg" alt="Foto 2" class="gallery-img" />
+        <img
+          src="img/AulaVaziaDevidoAoJS.jpg"
+          alt="Foto 2"
+          class="gallery-img"
+        />
+        <img src="img/FonteDaJuventude.jpg" alt="Foto 2" class="gallery-img" />
+        <img
+          src="img/naoAguentaMaisCodar.jpg"
+          alt="Foto 2"
+          class="gallery-img"
+        />
+        <img src="img/Gato.jpg" alt="Foto 2" class="gallery-img" />
+        <!-- Adicione mais imagens aqui -->
+      </div>
+    </div>
+    <div class="modal">
+      <span class="close">&times;</span>
+      <img src="" alt="Foto Ampliada" id="modal-img" />
+    </div>
+    <!-- Link voltar com JS-->
+    <button class="botaoVoltar" onclick="goBack()">Voltar</button>
+
+    <!-- Fim Link voltar com JS-->
+    <script>
+      const galleryImgs = document.querySelectorAll(".gallery-img"); // Seleciona todas as miniaturas da galeria
+      const modal = document.querySelector(".modal"); // Seleciona o modal
+      const modalImg = document.querySelector("#modal-img"); // Seleciona a imagem ampliada no modal
+      const closeBtn = document.querySelector(".close"); // Seleciona o botão de fechar do modal
+
+      galleryImgs.forEach((img) => {
+        img.addEventListener("click", () => {
+          // Adiciona um evento de clique a cada miniatura da galeria
+          modalImg.src = img.src; // Define a imagem ampliada do modal como a imagem da miniatura clicada
+          modal.style.display = "block"; // Exibe o modal
+          document.body.style.overflow = "hidden"; // Impede a rolagem da página quando o modal está aberto
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        // Adiciona um evento de clique ao botão de fechar do modal
+        modal.style.display = "none"; // Oculta o modal
+        document.body.style.overflow = "auto"; // Restaura a rolagem da página
+      });
+
+      modal.addEventListener("click", (e) => {
+        // Adiciona um evento de clique ao modal
+        if (e.target === modal) {
+          // Verifica se o clique foi fora da imagem ampliada
+          modal.style.display = "none"; // Oculta o modal
+        }
+      });
+
+      // Função para voltar à página anterior
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+  <footer>
+    <ul class="iconFooter">
+      <li>
+        <a href=""><img class="imgFooter1" src="img/instagram.png" /></a>
+      </li>
+      <li>
+        <a href="https://www.eucapacito.com.br/soulcode-oferece-bolsa-de-100-para-desenvolvedor-salesforce"><img class="imgFooter2"src="img/Linkedin-branco2.png"/></a>
+      </li>
+      <li>
+        <a href=""><img
+            class="imgFooter3"
+            src="img/SoulCode.png"
+            alt="Logo SoulCode"
+            style="width: 80px; height: 100px; padding-bottom: 40px"
+        /></a>
+      </li>
+    </ul>
+    <p>© 2023 Grupo Quattro.com Todos os direitos reservados.</p>
+  </footer>
+</html>

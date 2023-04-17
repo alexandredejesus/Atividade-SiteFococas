@@ -1,0 +1,466 @@
+/* Reset de Estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+  /* Deixando o site responsivo */
+  /* Exemplo de media query para dispositivos com largura de tela menor que 768 pixels */
+  @media screen and (max-width: 768px) {
+ 
+    /* Estilos para dispositivos com largura de tela menor que 768 pixels */
+    .menu-item {
+      position: relative;
+    }
+ 
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #000;
+      width: 100%;
+    }
+ 
+    .menu-item:hover .submenu {
+      display: block;
+    }
+  }
+ 
+  /* Exemplo de media query para dispositivos com largura de tela entre 768 e 1024 pixels */
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Estilos para dispositivos com largura de tela entre 768 e 1024 pixels */
+  }
+ 
+  /* Exemplo de media query para dispositivos com largura de tela maior que 1024 pixels */
+  @media screen and (min-width: 1024px) {
+    /* Estilos para dispositivos com largura de tela maior que 1024 pixels */
+  }
+ 
+  /* Exemplo de uso de unidades de medida relativas */
+  .container {
+    width: 100%;
+    /* 100% da largura do elemento pai */
+ 
+    padding: 1em;
+    /* 1 vezes o tamanho da fonte do elemento pai */
+    display: flex;
+    /*configurando 15/04 */
+    flex-direction: column;
+    min-height: 100vh;
+    /*configurando 15/04 */
+  }
+ 
+  /* Estilo para imagens responsivas */
+  img {
+    max-width: 100%;
+    /* A imagem não ficará maior que o contêiner */
+    height: auto;
+    /* A altura será ajustada proporcionalmente */
+  }
+ 
+  /* Estilo do Menu */
+  .menu {
+    background-color: #000000f6;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: antiquewhite;
+  }
+ 
+  .menu-item {
+    position: relative;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+ 
+  .menu-item:hover .submenu {
+    display: block;
+  }
+ 
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000;
+    width: 100%;
+    padding: 10px;
+  }
+ 
+  .submenu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+  }
+ 
+  .submenu a:hover {
+    background-color: #333;
+  }
+  /*Menu Dropdown*/
+  .menu-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000;
+    width: 100%;
+    padding: 10px;
+    z-index: 999; /* Defina um valor alto para garantir que o menu fique à frente do banner */
+  }
+  
+ 
+  /*inicio banner video*/
+  /* Estilo para o banner de vídeo */
+.banner-video {
+    width: 100%; /* Define a largura do banner de vídeo */
+    height: 0; /* Define a altura inicial do banner de vídeo como 0 */
+    padding-bottom: 56.25%; /* Define a proporção de aspecto (16:9) do vídeo */
+    position: relative; /* Define a posição como relativa para permitir posicionamento absoluto de elementos internos */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse a área do banner de vídeo */
+  }
+  
+  /* Estilo para o iframe de vídeo */
+  .banner-video iframe {
+    width: 100%; /* Define a largura do iframe como 100% */
+    height: 100%; /* Define a altura do iframe como 100% para preencher o espaço disponível */
+    position: absolute; /* Define a posição como absoluta para se ajustar ao banner de vídeo */
+    top: 0; /* Define a posição superior como 0 */
+    left: 0; /* Define a posição esquerda como 0 */
+  }
+  
+  /*Fim banner video*/
+  /* inicio da configuração do banner*/
+ 
+  .banner {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    /* Ajuste a altura do banner conforme necessário */
+    overflow: hidden;
+  }
+ 
+  .banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+ 
+  .banner img.active {
+    opacity: 1;
+  }
+ 
+ 
+  /* Fim da configuração do banner*/
+  /* Titulo comentadas*/
+  .comentadas{
+    font-size: 30px;
+    font-style:normal;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #218ee1;
+    position: absolute;
+      top: 10px;
+      left: 0;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.7); /* cor de fundo do texto */
+     
+  }
+
+  /* Titulo comentadas*/
+  #content-wrap {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+ }
+  .aside-container {
+   display: flex;
+   justify-content: space-between;
+   flex-grow: 1;
+  }
+ 
+  .aside {
+    
+    padding: 10px;
+   
+  }
+    .aside-left {
+   border-right: 1px solid #e00d0d;
+   display: flex;
+   flex-direction: column;
+   margin-right: 8px;
+   border-radius: 5px;
+   border: 1px solid #f121c1;
+   width: 500px;
+   height: 780px;
+   background-color: rgba(0, 0, 0, 0.25);
+   margin-top: 18px;
+   margin-left: 15px;
+ }
+ 
+ .aside-left h2 {
+   text-align: center;
+   font-size: 16px;
+ }
+ 
+ .aside-left h2 p {
+   text-align: center;
+ }
+ 
+ .aside-right {
+   display: flex;
+   flex-direction: column;
+   width: 250px;
+   height: 220px;
+ }
+ 
+ .aside-right h2 {
+   text-align: center;
+ }
+ 
+  .img-aside-direito1,
+  .img-aside-direito2,
+  .img-aside-direito3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .img-aside-direito1 img,
+  .img-aside-direito2 img,
+  .img-aside-direito3 img {
+    width: 235px;
+    height: 235px;
+    margin-bottom: 5px;
+  }
+ 
+ 
+  .cabecalhoH2 {
+    font: 52px Open sans serif;
+    color: #218ee1;
+    width: 190.2px;
+    height: 71px;
+  }
+ 
+  /* Inicio das divs mkt*/
+ 
+  .mkt1 {
+    margin-top: 5px;
+    width: 250px;
+    height: 250px;
+    background-color: rgb(179, 41, 126);
+    display: flex;
+    /* substitui flex:row; */
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: rgb(238, 242, 8);
+    padding: 10px;
+  }
+  .imgConteudo{
+    width: 250px;
+    height: 250px;
+  }
+ 
+  .mkt2 {
+    margin-top: 20px;
+    width: 250px;
+    height: 250px;
+    background-color: orange;
+    display: flex;
+    /* substitui flex:row; */
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: rgb(109, 43, 2);
+    padding: 10px;
+ 
+  }
+ 
+  .mkt3 {
+    margin-top: 20px;
+    width: 250px;
+    height: 250px;
+    background-color: aquamarine;
+    display: flex;
+    /* substitui flex:row; */
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: rgb(109, 43, 2);
+    padding: 10px;
+  }
+ 
+  .mkt4 {
+    margin-top: 20px;
+    width: 250px;
+    height: 250px;
+    background-color: rgb(155, 135, 56);
+    display: flex;
+    /* substitui flex:row; */
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: rgb(109, 43, 2);
+    padding: 10px;
+ 
+ 
+  }
+ 
+  .mkt5 {
+    margin-top: 20px;
+    width: 250px;
+    height: 250px;
+    background-color: orange;
+    display: flex;
+    /* substitui flex:row; */
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: rgb(109, 43, 2);
+    padding: 10px
+  }
+ 
+  .mkt6 {
+    margin-top: 20px;
+    width: 250px;
+    height: 250px;
+    background-color: aquamarine;
+    display: flex;
+    /* substitui flex:row; */
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: rgb(109, 43, 2);
+    padding: 10px;
+  }
+ 
+  .blocoPropagandas {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   margin: 20px 0;
+ }
+ 
+ .blocoPropagandas > div {
+   flex-basis: calc(33.33% - 20px);
+   height: 350px;
+   background-color: #f7f7f7;
+   border: 1px solid #ccc;
+   margin-bottom: 20px;
+   padding: 20px;
+   box-sizing: border-box;
+   text-align: center;
+   font-size: 16px;
+   color: #333;
+   margin-right: 10px;
+   margin-left: 10px;
+ }
+ 
+  /* Fim das divs mkt*/
+ 
+  .container {
+    display: flex;
+    justify-content: space-between;
+    /*define na horizontal*/
+    align-items: center;
+  }
+ 
+  /* CSS da GAleria de Fotos*/
+  .containerGaleria {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+ 
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+ 
+  .gallery-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px;
+    cursor: pointer;
+  }
+ 
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+ 
+  .modal img {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+ 
+  .close {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    cursor: pointer;
+  }
+ 
+  /* Fim do CSS da GAleria de Fotos*/
+  /**/
+ 
+  /* Define a altura mínima da página para 100% da altura da janela do navegador */
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  /* Define o espaço entre o conteúdo principal e o footer */
+ 
+ 
+  /* Estiliza o footer */
+ 
+ 
+   footer {
+     clear: both;
+     background-color: #333;
+     color: #fff;
+     text-align: center;
+     height: 100px;
+     /* Ou use "min-height" se preferir */
+     /*min-height: 100px;*/
+     padding: 10px;
+ }
+ 
+  footer p {
+    font-size: 14px;
+  }
+ 
+ 

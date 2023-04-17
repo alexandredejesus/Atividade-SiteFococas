@@ -1,0 +1,66 @@
+body{
+    margin-bottom: 100px;
+}
+
+/*------------Secção pagina 2 Css--------------*/
+h1{
+    text-align: center;
+    margin-top: 100px;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+.flex{
+    display: flex;
+    flex-wrap:wrap ;/*informa ao bloco de  img que ela pode quebrar para pa linha debaixo*/
+    max-width: 800px;
+    margin:0 auto;
+}
+
+.flex > div{
+    flex: 1 1 200px;/*1 expanda 1 esse é o flex srimp para ficar menor, 200px base */
+    margin: 10px;
+}
+
+/*----------GRID 1----------------*/
+
+.grid1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;/*dividindo em 33% cada um dos fr*/
+    max-width: 800px;
+    margin: 0 auto;
+    grid-gap: 20px;
+}
+
+.grid1 > div:nth-child(n + 5) {
+    /*background: blue;/*formula adiciona a partir do 5º bckground azul*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+
+}
+
+/*Estilizando anuncio*/
+
+.grid1 > div.anuncio{
+    grid-column: 1;/*posiciona o anuncio na  primeira coluna*/
+    grid-row:2/5;
+    border-top:10px solid tomato;
+    display: block;
+}
+@media (max-width: 600px) {
+    /*grid-template-columns: repeat(2, 1fr);*/
+    
+}
+.grid1 > div:nth-child(n = 4){
+    display: block;
+}
+
+.grid1 > div.anuncio {
+    grid-column: auto;
+    grid-row: auto;
+    order: -1;
+}

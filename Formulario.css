@@ -1,0 +1,133 @@
+/*Essa primeira parte define estilos para um elemento com a classe .container. -------------------------------------------------------------------*/
+.container {
+	display: flex; /*A propriedade display: flex define que os filhos desse elemento serão organizados em um layout de flexbox.*/
+	flex-wrap: wrap; /*flex-wrap: wrap permite que os elementos dentro do container quebrem a linha caso não caibam mais na horizontal.*/
+	justify-content: space-between; /*justify-content: space-between centraliza os elementos no eixo vertical, mas deixa espaço entre eles.*/
+	align-items: center; /*align-items: center centraliza os elementos no eixo horizontal.*/
+  }
+
+/* Estilos para o formulário de cadastro ---------------------------------------------------------------------------------------------------------*/
+
+.form-container {
+	width: 500px; /*A propriedade width define a largura do formulário como 500 pixels. */
+	margin: 50px auto; /*define uma margem de 50 pixels em cima e em baixo, e centraliza o elemento horizontalmente.*/
+	padding: 35px; /*define uma margem interna de 35 pixels.*/
+	border: 1px solid #fff; /* adiciona uma borda branca com 1 pixel de espessura em volta do formulário */
+	background-color: #000; /* define o fundo do formulário como preto. */
+	border-radius: 5px; /*arredonda as bordas do formulário em 5 pixels.*/
+	color: #fff; /* define a cor do texto para branco */
+	margin-left: auto;
+}
+
+/*Essa parte define os estilos para o título do formulário----------------------------------------------------------------------------------------- */
+.form-container h1 {
+	text-align: center; /*centraliza o texto horizontalmente.*/
+	margin-bottom: 20px; /*define uma margem inferior de 20 pixels. */
+	font-weight: bold; /*torna o texto em negrito.*/
+}
+
+/*Essa parte define estilos para as etiquetas dos campos do formulário. ------------------------------------------------------------------------------*/
+.form-container label {
+	display: block; /*define que cada etiqueta deve ser exibida como um bloco (ou seja, em uma linha separada). */
+	margin-bottom: 5px; /*define uma margem inferior de 5 pixels.*/
+	color: #fff; /*define a cor do texto como branco.*/
+}
+
+/* Define os estilos para campos de formulário de texto, email, telefone e select -------------------------------------------------------------------- */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="tel"],
+.form-container select {
+	width: 100%; /* define a largura do campo como 100% */
+	padding: 10px; /* define o preenchimento interno do campo */
+	border: none; /* remove a borda do campo */
+	border-radius: 5px; /* adiciona um arredondamento nas bordas do campo */
+	margin-bottom: 10px; /* adiciona uma margem inferior de 10px */
+	background-color: #fff; /* define um fundo branco para os campos */
+	color: #000; /* define a cor do texto para preto */
+}
+
+/* Define os estilos quando um campo de texto, email, telefone ou select é focado */
+.form-container input[type="text"]:focus,
+.form-container input[type="email"]:focus,
+.form-container input[type="tel"]:focus,
+.form-container select:focus {
+	outline: none; /* remove o contorno padrão de foco */
+	box-shadow: 0 0 5px #fff; /* adiciona uma sombra branca ao redor do campo quando é focado */
+}
+
+/* Define os estilos para caixas de seleção */
+.form-container input[type="checkbox"] {
+	margin-right: 10px; /* adiciona uma margem à direita de 10px */
+	color: #fff; /* define a cor do texto para branco */
+}
+
+/* Define os estilos para o botão de envio do formulário */
+.form-container input[type="submit"] {
+	background-color: #fff; /* define o fundo do botão como branco */
+	color: #000; /* define a cor do texto do botão como preto */
+	border: none; /* remove a borda do botão */
+	padding: 10px 20px; /* adiciona preenchimento interno ao botão */
+	border-radius: 5px; /* adiciona um arredondamento nas bordas do botão */
+	cursor: pointer; /* define o cursor do mouse como um ponteiro ao passar por cima do botão */
+}
+
+/* Define os estilos para quando o botão de envio do formulário é hover */
+.form-container input[type="submit"]:hover {
+	background-color: #444; /* escurece o fundo do botão quando é hover */
+	color: #fff; /* define a cor do texto do botão como branco */
+}
+
+/* Define os estilos po mapa ----------------------------------------------------------------------------------------------------------------------------- */
+.map-container {
+	width: 600px; /* define a largura do container do mapa */
+	height: 450px; /* define a altura do container do mapa */
+	margin: 50px auto; /* define uma margem de 50px no topo e na base e alinha horizontalmente com "auto" */
+	margin-bottom: 400px; /* define uma margem de 400px na parte inferior do container */
+}
+
+.align-middle {
+	display: flex; /* define um container flexível para centralizar verticalmente */
+	align-items: center; /* alinha os itens verticalmente ao centro */
+}
+
+.map-container .contato i.align-middle {
+	vertical-align: middle; /* alinha verticalmente o ícone dentro do container */
+}
+
+.map-container .contato span.align-middle {
+	display: inline-block; /* define o container de texto como um bloco inline */
+	vertical-align: middle; /* alinha verticalmente o texto ao centro do container */
+}
+
+.contato img.align-middle {
+	vertical-align: middle; /* alinha verticalmente a imagem do contato */
+	margin-right: 5px; /* adiciona uma margem de 5px à direita da imagem para separá-la do texto */
+}
+
+img.align-middle {
+	vertical-align: middle; /* alinha verticalmente as imagens com a classe "align-middle" */
+}
+
+span.align-middle {
+	display: inline-block; /* define o container do texto como um bloco inline */
+	vertical-align: middle; /* alinha verticalmente o texto com a classe "align-middle" */
+}
+
+.corFundo{
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+
+footer {
+    background-color: #0c0108;
+    color: #fff;
+    padding: 22px;
+    text-align: center;
+    position: relative;
+    flex-flow: nowrap;
+    bottom: 0;
+    left: 0;
+    right: 0;   
+  }

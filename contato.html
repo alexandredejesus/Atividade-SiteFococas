@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="Formulario.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Banner com imagens rotativas</title>
+  </head>
+
+  <body>
+    <div id="page-container">
+      <div id="content-wrap">
+        <!-- Início do menu -->
+        <div class="menu">
+          <!-- Estrutura do menu -->
+          <nav class="menu">
+            <div class="menu-item">
+              <span><a href="index.html">Notícias</a></span>
+              <div class="submenu">
+                <a href="#">Política</a>
+                <a href="#">Esportes</a>
+                <a href="#">Economia</a>
+                <a href="#">Internacional</a>
+                <a href="#">Tecnologia</a>
+              </div>
+            </div>
+            <div class="menu-item">
+              <span>Entretenimento</span>
+              <div class="submenu">
+                <a href="#">Cinema</a>
+                <a href="#">Música</a>
+                <a href="#">TV</a>
+                <a href="#">Famosos</a>
+              </div>
+            </div>
+            <div class="menu-item">
+              <span>Esportes</span>
+              <div class="submenu">
+                <a href="#">Futebol</a>
+                <a href="#">Basquete</a>
+                <a href="#">Tênis</a>
+                <a href="#">Outros</a>
+              </div>
+            </div>
+            <div class="menu-item">
+              <span>Estilo de Vida</span>
+              <div class="submenu">
+                <a href="#">Saúde</a>
+                <a href="#">Moda</a>
+                <a href="#">Beleza</a>
+                <a href="#">Viagem</a>
+                <a href="#">Gastronomia</a>
+              </div>
+            </div>
+            <div class="menu-item">
+              <span>Mais</span>
+              <div class="submenu">
+                <a href="#">Tecnologia</a>
+                <a href="#">Carros</a>
+                <a href="#">Imóveis</a>
+                <a href="#">Empregos</a>
+                <a href="#">Educação</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- Fim do menu -->
+
+        <!-- Inicio do banner -->
+        <div class="banner">
+          <img src="img/AstronautaFeijão.jpg" alt="Imagem 1" class="active" />
+          <img src="img/unicornioNosAndes.jpg" alt="Imagem 2" />
+          <img src="img/cachorroJogandoXadrez.jpg" alt="Imagem 3" />
+        </div>
+
+        <!-- Fim do banner -->
+
+        <!-- Aqui está sendo definido o input de cor e o botão para definir a cor de fundo da página-->
+        <div class="corFundo">
+          <span>Cor da página</span>
+          <input type="color" id="cor-de-fundo" />
+          <span
+            ><button onclick="definirCorDeFundo()">
+              Definir Cor de Fundo
+            </button></span
+          >
+        </div>
+
+        <div class="aside-container">
+          <aside class="aside-left">
+            <!-- Conteúdo do aside esquerdo -->
+
+            <h2 style="font-size: 30px; color: blue" flex:row;>Anuncie aqui</h2>
+            <div
+              style="
+                width: 100%;
+                height: 0;
+                padding-bottom: 178%;
+                position: relative;
+              "
+            >
+              <iframe
+                src="https://giphy.com/embed/9XQcMFiYYpiduUod76"
+                width="100%"
+                height="100%"
+                style="position: absolute"
+                frameborder="0"
+                class="giphy-embed"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p>
+              <a
+                href="https://giphy.com/gifs/glc-grupolocutorescomerciais-9XQcMFiYYpiduUod76"
+              ></a>
+            </p>
+            <div
+              style="
+                width: 100%;
+                height: 0;
+                padding-bottom: 44%;
+                position: relative;
+              "
+            >
+              <iframe
+                src="https://giphy.com/embed/PJES8wA92rK3NzFuNU"
+                width="100%"
+                height="100%"
+                style="position: absolute"
+                frameborder="0"
+                class="giphy-embed"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p>
+              <a
+                href="https://giphy.com/gifs/sineiarangel-severo-amoressertanejos-autoranacional-PJES8wA92rK3NzFuNU"
+              ></a>
+            </p>
+          </aside>
+
+          <!--Formulário para cadastro-->
+          <!--Container - cria um contêiner para o formulário (envolve todo o conteúdo do formulário)-->
+          <div class="container">
+            <!--Form-container - envolve apenas os elementos do formulário, para que eles possam ser estilizados de forma 
+			específica, se necessário.-->
+            <div class="form-container">
+              <!--Título para o formulário.-->
+              <h1>Cadastro para receber fofocas quentinhas</h1>
+              <form action="#" method="post">
+                <!-- Etiqueta para o campo "nome", cria um campo de entrada de texto para o nome e o atributo "required" para 
+					exigir que o campo seja preenchido.-->
+                <label for="nome">Nome:</label>
+                <input
+                  type="text"
+                  id="nomeid"
+                  name="nome"
+                  placeholder="Informe seu nome"
+                  required
+                />
+
+                <!--Etiqueta para o campo "sobrenome", cria um campo de entrada de texto para o sobrenome e o atributo "required"
+					 para exigir que o campo seja preenchido. -->
+                <label for="sobrenome">Sobrenome:</label>
+                <input
+                  type="text"
+                  id="sobrenome"
+                  name="sobrenome"
+                  placeholder="informe seu sobrenome"
+                  required
+                />
+
+                <!--Etiqueta para o campo "email", cria um campo de entrada de email e o atributo "required" para exigir que 
+					o campo seja preenchido.-->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+
+                <!--Etiqueta para o campo "data-nascimento" e cria o campo de entrada de data-nascimento"-->
+                <label for="data-nascimento">Data de nascimento:</label>
+                <input
+                  type="date"
+                  id="data-nascimento"
+                  name="data-nascimento"
+                /><br /><br />
+
+                <!--Etiqueta para o campo "telefone" e cria um campo de entrada de telefone-->
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" />
+
+                <!--Etiqueta para o campo "interesse", cria um campo de seleção com um ID de "interesse"e o atributo "required" 
+					para exigir que uma opção seja selecionada.-->
+                <label for="interesse">Qual conteúdo mais te interessa?</label>
+                <select id="interesse" name="interesse" required>
+                  <!--cria uma opção padrão para o campo de seleção.-->
+                  <option value="">Selecione uma opção</option>
+                  <option value="entreterimento">Entreterimento</option>
+                  <option value="famosos">Famosos</option>
+                  <option value="noticias">Notícias</option>
+                </select>
+
+                <!--Checkbox termos de uso e o atributo que é obrigatório (required), ou seja, o usuário precisa marcá-lo para poder enviar o formulário.-->
+                <label for="termos-uso">
+                  <input
+                    type="checkbox"
+                    id="termos-uso"
+                    name="termos-uso"
+                    required
+                  />
+                  Concordo com os termos de uso
+                </label>
+
+                <!--Checkbox envio de email e o atributo que é obrigatório (required), ou seja, o usuário precisa marcá-lo para poder enviar o formulário.-->
+                <label for="envio-email">
+                  <input
+                    type="checkbox"
+                    id="envio-email"
+                    name="envio-email"
+                    required
+                  />
+                  Aceito o envio de emails
+                </label>
+
+                <!--Botão de envio de formulário é um input do tipo "submit" com uma classe "enviar" e um evento onclick que chama a função "Enviar()". O texto no botão é "Enviar".-->
+                <input
+                  type="submit"
+                  class="enviar"
+                  onclick="Enviar();"
+                  value="Enviar"
+                />
+              </form>
+            </div>
+
+            <!--Mapa-->
+            <div class="map-container">
+              <div class="contato">
+                <!--Cria um ícone do Google Material Icons, com a classe "align-middle" e o ícone "location_on", que representa uma marcação de localização.-->
+                <i class="material-icons align-middle">location_on</i>
+
+                <!--Cria um span com a classe "align-middle", que é usada para centralizar verticalmente o ícone e o texto que vem a seguir.-->
+                <!--A tag HTML <span> é usada para agrupar elementos em linha e aplicar estilos a um trecho de texto. É uma tag de contêiner em 
+					linha que não afeta a estrutura do documento e é usada para aplicar estilos a um trecho específico de texto ou para agrupar 
+					elementos em linha.-->
+                <span class="align-middle">
+                  <p>
+                    Alameda Santos, 1.165 - Jd. Paulista, São Paulo - SP
+                  </p> </span
+                ><br />
+
+                <!--Tags para perfil do LinkedIn-->
+                <i class="material-icons align-middle">person</i>
+                <a href="https://www.linkedin.com/in/c-jesus/" target="_blank"
+                  >Carlos Alexandre |</a
+                >
+                <a
+                  href="https://www.linkedin.com/in/cleide-squarcini"
+                  target="_blank"
+                  >Cleide Marsola |</a
+                >
+                <a
+                  href="https://www.linkedin.com/in/guilhermefofano/"
+                  target="_blank"
+                  >Guilherme Fofano</a
+                ><br /><br />
+              </div>
+
+              <!--Iframe - permite a incorporação de um mapa do Google Maps no site. O atributo "src" contém a URL do mapa, onde é possível definir a localização,
+				 o zoom, o tamanho e outras opções de exibição do mapa. 
+				 O "width" e "height" definem a largura e a altura do mapa em pixels, 
+				 enquanto o "style" permite definir o estilo CSS do elemento. 
+				 O atributo "allowfullscreen" permite que o mapa seja exibido em tela cheia,
+				 e o "referrerpolicy" controla a política de referenciamento do navegador.-->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3657.0791146775223!2d-46.6563703!3d-23.5656019!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c636f78fb7%3A0xc8c4fd5b1a995474!2sAlameda%20Santos%2C%201165%20-%20Jardim%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001419-002!5e0!3m2!1spt-BR!2sbr!4v1681475486388!5m2!1spt-BR!2sbr"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+
+          <aside class="aside-right">
+            <!-- Conteúdo do aside direito -->
+            <h2 style="font-size: 30px; color: blue" flex:row;>Clique aqui</h2>
+            <div
+              style="
+                width: 100%;
+                height: 0;
+                padding-bottom: 143%;
+                position: relative;
+              "
+            >
+              <iframe
+                src="https://giphy.com/embed/jS9IcCJjrCBlQTJ9fj"
+                width="100%"
+                height="100%"
+                style="position: absolute"
+                frameborder="0"
+                class="giphy-embed"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p>
+              <a
+                href="https://giphy.com/gifs/Wayfarerarg-wayfarer-wayfarerarg-wayfa-jS9IcCJjrCBlQTJ9fj"
+              ></a>
+            </p>
+            <br />
+            <div
+              style="
+                width: 100%;
+                height: 0;
+                padding-bottom: 178%;
+                position: relative;
+              "
+            >
+              <iframe
+                src="https://giphy.com/embed/cMVKCGE1WEHsooDWaA"
+                width="100%"
+                height="100%"
+                style="position: absolute"
+                frameborder="0"
+                class="giphy-embed"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p>
+              <a
+                href="https://giphy.com/gifs/isocred-consorcio-emprestimos-isocredhs-cMVKCGE1WEHsooDWaA"
+              ></a>
+            </p>
+            <br />
+            <div
+              style="
+                width: 100%;
+                height: 0;
+                padding-bottom: 100%;
+                position: relative;
+              "
+            >
+              <iframe
+                src="https://giphy.com/embed/cmYScPXkDMKVidohoo"
+                width="100%"
+                height="100%"
+                style="position: absolute"
+                frameborder="0"
+                class="giphy-embed"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p>
+              <a
+                href="https://giphy.com/gifs/InstitutoQR-iqr-quebre-as-regras-ser-qr-cmYScPXkDMKVidohoo"
+              ></a>
+            </p>
+            <br />
+          </aside>
+          <!--Fim do Conteúdo do aside direito -->
+        </div>
+        <!--Chama JS na página -->
+        <script src="arquivo.js"></script>
+      </div>
+    </div>
+
+    <!--Essa linha de código está inserindo um script externo chamado "email.js" no seu documento HTML. 
+		O tipo de script é definido como "text/javascript". Isso indica que o arquivo "email.js" contém código em JavaScript 
+		que será executado quando a página for carregada no navegador. O conteúdo do arquivo "email.js" deve conter funções 
+		que lidam com a lógica de envio de email no site.-->
+    <div>
+      <script src="email.js"></script>
+    </div>
+  </body>
+  <footer>
+    <ul class="iconFooter">
+      <li>
+        <a href=""><img class="imgFooter1" src="img/instagram.png" /></a>
+      </li>
+      <li>
+        <a
+          href="https://www.eucapacito.com.br/soulcode-oferece-bolsa-de-100-para-desenvolvedor-salesforce"
+          ><img class="imgFooter2" src="img/Linkedin-branco2.png"
+        /></a>
+      </li>
+      <li>
+        <a href=""
+          ><img
+            class="imgFooter3"
+            src="img/SoulCode.png"
+            alt="Logo SoulCode"
+            style="width: 80px; height: 100px; padding-bottom: 40px"
+        /></a>
+      </li>
+    </ul>
+    <p>© 2023 Grupo Quattro.com Todos os direitos reservados.</p>
+  </footer>
+</html>
